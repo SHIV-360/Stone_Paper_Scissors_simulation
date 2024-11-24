@@ -15,3 +15,25 @@ This is a simulation of the classic game Stone, Paper, Scissors using Python's T
 ## Next Steps:
 - Implement object interactions where objects change type upon collision (e.g., Stone vs Paper, Paper vs Scissors).
 - Start working on the game logic to declare a winner.
+
+
+# Stone Paper Scissors Simulation - Day 2
+
+## Overview
+On Day 2, the focus was on implementing the core game logic and enhancing the interactions between objects in the simulation.
+
+## Day 2 Tasks:
+- Implemented collision response logic:
+  - Objects now change direction when they collide.
+  - Objects bounce off the boundaries of the playing field.
+- Added game mechanics where objects change type upon collision:
+  - **Stone** becomes **Paper** when it collides with **Paper**.
+  - **Paper** becomes **Scissors** when it collides with **Scissors**.
+  - **Scissors** becomes **Stone** when it collides with **Stone**.
+- Optimized the collision detection function for efficiency.
+- Verified that all object interactions work as expected through testing.
+
+## Next Steps:
+- Add a mechanism to check if all objects belong to the same type and declare a winner.
+- Implement a graphical user interface (GUI) element to display the leaderboard dynamically during the simulation.
+

@@ -26,12 +26,37 @@ for _ in range(4):
     border.forward(BOX_SIZE)
     border.right(90)
 
-# Add a Start button
-start_button = turtle.Turtle()
-start_button.hideturtle()
-start_button.penup()
-start_button.goto(0, BOX_SIZE // 2 - 20)
-start_button.write("Click to Start", align="center", font=("Arial", 16, "bold"))
+# Classes for objects
+class GameObject(turtle.Turtle):
+    def __init__(self, obj_type):
+        super().__init__(shape="circle")
+        self.penup()
+        self.color(self.get_color(obj_type))
+        self.goto(random.randint(-BOX_SIZE // 2 + 45, BOX_SIZE // 2 - 45),
+                  random.randint(-BOX_SIZE // 2 + 45, BOX_SIZE // 2 - 45))
+        self.dx = random.choice([-SPEED, SPEED])
+        self.dy = random.choice([-SPEED, SPEED])
+        self.type = obj_type
+
+    def move(self):
+        # Move the object
+        self.goto(self.xcor() + self.dx, self.ycor() + self.dy)
+
+        # Bounce off walls (boundary limits)
+        if self.xcor() >= BOX_SIZE // 2 - 20 or self.xcor() <= -BOX_SIZE // 2 + 20:
+            self.dx *= -1
+        if self.ycor() >= BOX_SIZE // 2 - 15 or self.ycor() <= -BOX_SIZE // 2 + 15:
+            self.dy *= -1
+
+    def get_color(self, obj_type):
+        return {"stone": "gray", "paper": "white", "scissors": "orange"}[obj_type]
+
+# Create the objects
+objects = []
+for _ in range(NUM_OBJECTS // 3):
+    objects.append(GameObject("stone"))
+    objects.append(GameObject("paper"))
+    objects.append(GameObject("scissors"))
 
 # Keep the window open
 screen.mainloop()
