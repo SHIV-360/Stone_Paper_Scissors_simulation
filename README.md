@@ -1,39 +1,41 @@
-# Stone_Paper_Scissors_simulation
-
-# Stone Paper Scissors Simulation - Day 1
+# Stone Paper Scissors Simulation
 
 ## Overview
-This is a simulation of the classic game Stone, Paper, Scissors using Python's Turtle graphics module. On Day 1, the focus was on setting up the basic environment, initializing the objects, and implementing basic movement and collision detection.
+This project simulates the classic game of Stone, Paper, Scissors using Python's Turtle graphics module. Over three days, the simulation was built to visually demonstrate object interactions, movement, and transformations in a bounded environment.
 
-## Day 1 Tasks:
-- Set up the initial game window using Turtle graphics.
-- Created a boundary box to represent the playing field.
-- Initialized 3 types of objects (stone, paper, scissors) and assigned random movement.
-- Implemented collision detection between objects.
-- Set up a leaderboard that tracks the number of each type of object in the simulation.
+---
 
-## Next Steps:
-- Implement object interactions where objects change type upon collision (e.g., Stone vs Paper, Paper vs Scissors).
-- Start working on the game logic to declare a winner.
+## Day 1: Setting the Foundation
+- Created the game environment using Turtle graphics.
+- Designed the boundary box for the simulation.
+- Initialized three types of objects (`Stone`, `Paper`, and `Scissors`) with random positions and movement.
+- Set up basic collision detection between objects.
+- Implemented a simple leaderboard to count the number of each type of object.
 
+---
 
-# Stone Paper Scissors Simulation - Day 2
+## Day 2: Implementing Interactions
+- Enhanced collision logic to make objects bounce off each other and the boundary.
+- Added transformation rules:
+  - **Stone** becomes **Paper** when colliding with **Paper**.
+  - **Paper** becomes **Scissors** when colliding with **Scissors**.
+  - **Scissors** becomes **Stone** when colliding with **Stone**.
+- Improved movement behavior for smoother object interactions.
 
-## Overview
-On Day 2, the focus was on implementing the core game logic and enhancing the interactions between objects in the simulation.
+---
 
-## Day 2 Tasks:
-- Implemented collision response logic:
-  - Objects now change direction when they collide.
-  - Objects bounce off the boundaries of the playing field.
-- Added game mechanics where objects change type upon collision:
-  - **Stone** becomes **Paper** when it collides with **Paper**.
-  - **Paper** becomes **Scissors** when it collides with **Scissors**.
-  - **Scissors** becomes **Stone** when it collides with **Stone**.
-- Optimized the collision detection function for efficiency.
-- Verified that all object interactions work as expected through testing.
+## Day 3: Final Touches
+- Added logic to check when all objects belong to the same type, declaring a winner.
+- Introduced a "Start Simulation" button for better user interaction.
+- Enhanced the leaderboard to dynamically update during the simulation.
+- Added a final message to announce the winner when the game ends.
+- Cleaned up the code for better readability and maintainability.
 
-## Next Steps:
-- Add a mechanism to check if all objects belong to the same type and declare a winner.
-- Implement a graphical user interface (GUI) element to display the leaderboard dynamically during the simulation.
+---
 
+## How to Run the Simulation
+1. Install Python if not already installed.
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/SHIV-360/Stone_Paper_Scissors_simulation.git
+   cd Stone_Paper_Scissors_simulation
